@@ -46,7 +46,31 @@ const priceOptions = [
     {
         "id": 4,
         "name": "Elite Plan",
-        "price": 119.99,
+        "price": 219.99,
+        "features": [
+            "All Premium Plan benefits",
+            "Unlimited personal training",
+            "Private locker & VIP lounge access",
+            "Custom meal planning",
+            "Massage therapy (once per month)"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Hybrid Plan",
+        "price": 1934.99,
+        "features": [
+            "All Premium Plan benefits",
+            "Unlimited personal training",
+            "Private locker & VIP lounge access",
+            "Custom meal planning",
+            "Massage therapy (once per month)"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Elite Plan New",
+        "price": 169.990,
         "features": [
             "All Premium Plan benefits",
             "Unlimited personal training",
@@ -58,12 +82,14 @@ const priceOptions = [
 ];
       
     return (
-        <div>
-            <h2 className="text-5xl">Best Prices In The town</h2>
+        <div className="m-12">
+            <h2 className="text-5xl text-center p-4">Best Prices In The town</h2>
+            <div className="grid md:grid-cols-3 gap-4">
             {
                 priceOptions.map(option => <PriceOption key={option.id} option={option}></PriceOption>)
             }
             
+            </div>
         </div>
     );
 };
