@@ -8,8 +8,9 @@ function App() {
 
   return (
     <>
-      {/* <Daisynav></Daisynav> */}
+     
       <Navber></Navber>
+      <Daisynav></Daisynav>
       <h1 className='text-7xl bg-sky-600'>Vite + React</h1>
     
     

@@ -1,8 +1,12 @@
+import { useState } from "react";
 import Link from "../Link/Link";
+import { IoMdMenu} from "react-icons/io";
+import { AiOutlineClose } from "react-icons/ai";
 
 
 
 const Navber = () => {
+    const[open ,setOpen] = useState(false)
 
 
     const routes = [
@@ -16,6 +20,17 @@ const Navber = () => {
       
     return (
         <nav>
+            <div className="md:hidden text-2xl" onClick={()=>setOpen(!open)}>
+                {/* //here open means true thekle false hoye jabe and false thakle true hoye jabe */}
+                {
+                    open === true ? <AiOutlineClose></AiOutlineClose>:< IoMdMenu className=" "></IoMdMenu>
+                }
+
+                {/* //this process is called toggled */}
+                
+            
+            </div>
+           
             <ul className="md:flex">
             {
                 routes.map(route =><Link  key={route.id} route={route}></Link>)
