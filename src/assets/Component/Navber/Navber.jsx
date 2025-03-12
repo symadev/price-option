@@ -19,8 +19,8 @@ const Navber = () => {
      
       
     return (
-        <nav>
-            <div className="md:hidden text-2xl" onClick={()=>setOpen(!open)}>
+        <nav className="text-black p-6 bg-yellow-200">
+            <div className=" md:hidden text-2xl " onClick={()=>setOpen(!open)}>
                 {/* //here open means true thekle false hoye jabe and false thakle true hoye jabe */}
                 {
                     open === true ? <AiOutlineClose></AiOutlineClose>:< IoMdMenu className=" "></IoMdMenu>
@@ -31,7 +31,9 @@ const Navber = () => {
             
             </div>
            
-            <ul className="md:flex">
+            <ul className={`" md:flex absolute duration-1000 lg:static
+                ${open ? 'top-16':'-top-60'}
+                bg-yellow-200 px-6`}>
             {
                 routes.map(route =><Link  key={route.id} route={route}></Link>)
                 //inside the route we sent the route props
