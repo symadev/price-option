@@ -1,4 +1,4 @@
-import { LineChart as  LChart,Line ,XAxis,YAxis} from 'recharts';
+import { LineChart as  LChart,Line ,XAxis,YAxis, CartesianGrid} from 'recharts';
 //i want to draw a line chart for different subject marks.please give me data of ten students
 const LineChart = () => {
     const studentMarks = [
@@ -18,6 +18,7 @@ const LineChart = () => {
     return (
         <div>
             <LChart  width={800} height={300} data={studentMarks}>
+            < CartesianGrid></CartesianGrid>
             <XAxis dataKey="name"/>
             <YAxis />
             <Line dataKey="Math" stroke="red" ></Line>
